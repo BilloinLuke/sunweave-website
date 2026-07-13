@@ -196,6 +196,35 @@
     @media (max-width: 380px) {
       .nav-links .btn { padding: .4rem .5rem; font-size: .72rem; }
     }
+
+    /* ---------- Test-site watermark ---------- */
+    .site-watermark {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      pointer-events: none;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: center;
+      gap: 5vh 8vw;
+      overflow: hidden;
+      padding: 2vh 2vw;
+    }
+    .site-watermark span {
+      font-size: clamp(1.1rem, 3vw, 2.2rem);
+      font-weight: 900;
+      color: var(--fg);
+      opacity: 0.055;
+      transform: rotate(-28deg);
+      white-space: nowrap;
+      user-select: none;
+      letter-spacing: 0.06em;
+    }
+    @media (max-width: 560px) {
+      .site-watermark { gap: 6vh 12vw; }
+      .site-watermark span { font-size: clamp(0.9rem, 4.5vw, 1.4rem); }
+    }
   </style>
   <script>
     (function () {
