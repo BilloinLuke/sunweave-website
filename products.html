@@ -3,54 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Products — SUNWEAVE Beach Towel Designs &amp; Prints</title>
-  <meta name="description" content="Explore SUNWEAVE's beach towel collections: Tropical, Boho, Geometric, Vintage, Morandi, Animal, Roundie and a seamless print library — all OEM/ODM customizable." />
+  <title>Custom Beach Towel Designs | SUNWEAVE OEM/ODM Catalog</title>
+  <meta name="description" content="Browse SUNWEAVE's extensive beach towel catalog. 8 collections including Tropical, Boho, and Geometric. All designs are fully customizable with low MOQ." />
   <meta name="keywords" content="beach towel designs, custom beach towels, towel prints, OEM towel catalog, SUNWEAVE products" />
   <meta name="author" content="Jiangsu Huiyi Supply Chain Co., Ltd." />
   <meta name="theme-color" content="#FF6FA3" />
-  <link rel="canonical" href="https://www.sunweave.example.com/products.html" />
+  <link rel="canonical" href="https://www.sunweave.com/products.html" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="SUNWEAVE Products — Beach Towel Designs &amp; Prints" />
-  <meta property="og:description" content="Browse 50+ beach towel designs across 8 collections. Every design is OEM/ODM customizable." />
+  <meta property="og:title" content="Custom Beach Towel Designs | SUNWEAVE OEM/ODM Catalog" />
+  <meta property="og:description" content="Browse 50+ beach towel designs across 8 collections. Fully customizable for resorts and brands." />
   <meta property="og:site_name" content="SUNWEAVE" />
-  <meta property="og:url" content="https://www.sunweave.example.com/products.html" />
+  <meta property="og:url" content="https://www.sunweave.com/products.html" />
 
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23FF6FA3'/%3E%3Ccircle cx='16' cy='13' r='6' fill='%23FFDD73'/%3E%3Cpath d='M6 24h20l-3-6H9z' fill='%23ffffff'/%3E%3C/svg%3E" />
   <link rel="stylesheet" href="assets/css/site.css" />
 
-  <!-- Random fly-in / fly-out reveal + dopamine title (scoped to this page) -->
   <style>
+    html, body { margin: 0; padding: 0; overflow-x: hidden !important; width: 100vw; position: relative; }
     .animate-el {
       opacity: 0;
       transform: translate(var(--in-x, 0px), var(--in-y, 0px)) rotate(var(--rot, 0deg));
-      transition: opacity 1.1s cubic-bezier(.4, 0, .2, 1),
-                  transform 1.1s cubic-bezier(.4, 0, .2, 1);
+      transition: opacity 1.1s cubic-bezier(.4, 0, .2, 1), transform 1.1s cubic-bezier(.4, 0, .2, 1);
       transition-delay: var(--delay, 0s);
       will-change: opacity, transform;
     }
     .char { display: inline-block; }
-    /* dopamine per-letter palette — cycles through six colors */
     .pw-hero h1 .char { color: #FF6FA3; }
     .pw-hero h1 .char:nth-child(6n+2) { color: #FFB45C; }
     .pw-hero h1 .char:nth-child(6n+3) { color: #FFDD73; }
     .pw-hero h1 .char:nth-child(6n+4) { color: #5BD9BB; }
     .pw-hero h1 .char:nth-child(6n+5) { color: #7FD6FF; }
     .pw-hero h1 .char:nth-child(6n+6) { color: #A98BFF; }
+    .pw-hero h1 .word { display: inline-block; white-space: nowrap; }
     .animate-el.in { opacity: 1; transform: translate(0, 0) rotate(var(--rot, 0deg)); }
-    .animate-el.out {
-      opacity: 0;
-      transform: translate(var(--out-x, 0px), var(--out-y, 0px)) rotate(var(--rot, 0deg));
-      transition: opacity .9s cubic-bezier(.4, 0, .6, 1),
-                  transform .9s cubic-bezier(.4, 0, .6, 1);
-      transition-delay: var(--delay, 0s);
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .animate-el { opacity: 1 !important; transform: none !important; }
-    }
-    /* Chat section — reuse site.css chat styles, lightly tuned for this page */
+    .animate-el.out { opacity: 0; transform: translate(var(--out-x, 0px), var(--out-y, 0px)) rotate(var(--rot, 0deg)); transition: opacity .9s cubic-bezier(.4, 0, .6, 1), transform .9s cubic-bezier(.4, 0, .6, 1); transition-delay: var(--delay, 0s); }
+    @media (prefers-reduced-motion: reduce) { .animate-el { opacity: 1 !important; transform: none !important; } }
     .chat-page { min-height: auto; padding: 3rem 0 4rem; }
-    /* Emoji picker */
     .emoji-picker { position: absolute; bottom: 58px; left: 8px; z-index: 100; width: 320px; max-width: calc(100vw - 2rem); padding: .7rem; background: var(--card); border: 1px solid var(--card-border); border-radius: 16px; box-shadow: var(--shadow); display: none; }
     .emoji-picker.open { display: grid; }
     .emoji-picker h4 { margin: 0 0 .5rem; font-size: .8rem; color: var(--fg-soft); font-weight: 600; }
@@ -58,6 +47,16 @@
     .emoji-grid button { background: transparent; border: none; border-radius: 8px; font-size: 1.25rem; padding: .3rem; cursor: pointer; transition: background .15s; }
     .emoji-grid button:hover { background: rgba(255, 61, 127, .16); }
     .emoji-picker .close { display: block; margin: .5rem auto 0; padding: .25rem .7rem; font-size: .75rem; background: rgba(128,128,128,.1); border: 1px solid var(--card-border); border-radius: 8px; color: var(--fg-soft); cursor: pointer; }
+
+    @media (max-width: 640px) {
+      header.nav { padding: .6rem .8rem; }
+      .brand { font-size: 1rem; }
+      .nav-links { gap: .35rem; margin-right: 0; }
+      .nav-links .btn { padding: .45rem .65rem; font-size: .76rem; }
+      .pw-hero { text-align: left; padding: 5.5rem 0 2.5rem; }
+      .pw-hero h1 { margin-left: 0; margin-right: 0; }
+      .pw-hero p { margin-left: 0; margin-right: 0; }
+    }
   </style>
 
   <script type="application/ld+json">
@@ -70,7 +69,6 @@
   }
   </script>
   <script>
-    /* 深浅模式按系统本地时间自动切换：6:00–17:59 浅色，18:00–05:59 深色；每分钟自检一次 */
     (function () {
       function byTime() {
         var h = new Date().getHours();
@@ -87,14 +85,13 @@
   <header class="nav" id="nav">
     <a class="brand" href="index.html" aria-label="SUNWEAVE home"><span class="dot"></span> SUNWEAVE</a>
     <div class="nav-links">
-      <a class="btn mobile-hide" href="index.html">← Home</a>
+      <a class="btn" href="index.html">Home</a>
       <a class="btn" href="products.html" aria-current="page">Products</a>
       <a class="btn" href="factory.html">Visit Factory</a>
     </div>
   </header>
 
   <main id="main">
-    <!-- Hero -->
     <section class="pw-hero">
       <div class="wrap">
         <span class="eyebrow animate-el">Product Showcase</span>
@@ -104,17 +101,14 @@
       </div>
     </section>
 
-    <!-- Category filter -->
     <nav class="pw-cats" id="pwCats" aria-label="Product categories"></nav>
 
-    <!-- Product grid -->
     <section class="wrap">
       <div class="pw-grid" id="pwGrid" aria-live="polite"></div>
       <div class="pw-empty" id="pwEmpty" hidden>No products in this category yet.</div>
     </section>
   </main>
 
-  <!-- Chat concierge: image + document upload, answers grounded in the KB -->
   <section class="chat-page" id="chat">
     <div class="chat-wrap">
       <div class="chat-head">
@@ -155,7 +149,6 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="wrap">
       <div class="footer-grid">
@@ -163,44 +156,29 @@
           <a class="brand" href="index.html"><span class="dot"></span> SUNWEAVE</a>
           <p>Jiangsu Huiyi Supply Chain Co., Ltd. — premium beach towel manufacturer &amp; exporter. 15+ years of ODM/OEM experience, delivering to 60+ countries.</p>
           <div class="footer-socials">
-            <a class="social-link" href="https://www.instagram.com/Huiyi_BeachTowel" aria-label="Instagram" target="_blank" rel="noopener">IG</a>
-            <a class="social-link" href="https://www.facebook.com/HuiyiSupplyChain" aria-label="Facebook" target="_blank" rel="noopener">FB</a>
-            <a class="social-link" href="https://www.linkedin.com/company/huiyi-supply-chain" aria-label="LinkedIn" target="_blank" rel="noopener">IN</a>
-            <a class="social-link" href="mailto:sjxsix@126.com" aria-label="Email">@</a>
+            <a class="social-link" href="https://www.instagram.com/Huiyi_BeachTowel" target="_blank" rel="noopener">IG</a>
+            <a class="social-link" href="https://www.facebook.com/HuiyiSupplyChain" target="_blank" rel="noopener">FB</a>
+            <a class="social-link" href="https://www.linkedin.com/company/huiyi-supply-chain" target="_blank" rel="noopener">IN</a>
+            <a class="social-link" href="mailto:sjxsix@126.com">@</a>
           </div>
         </div>
         <div class="footer-col">
           <h3>Products</h3>
           <ul>
             <li><a href="products.html">All Designs</a></li>
-            <li><a href="products.html">Tropical &amp; Boho</a></li>
-            <li><a href="products.html">Geometric &amp; Morandi</a></li>
             <li><a href="products.html">Seamless Prints</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h3>Company</h3>
-          <ul>
-            <li><a href="factory.html">Visit Factory</a></li>
-            <li><a href="index.html#chat">ODM / OEM</a></li>
-            <li><a href="index.html#chat">Sampling</a></li>
-            <li><a href="index.html#chat">Private Label</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h3>Contact</h3>
           <ul>
-            <li>Huiyi Industrial Park, Textile Road</li>
-            <li>Nantong, Jiangsu, China</li>
             <li><a href="tel:+8651385886688">+86-513-8588-6688</a></li>
-            <li><a href="https://wa.me/8618651314806">WhatsApp +86 18651314806</a></li>
             <li><a href="mailto:sjxsix@126.com">sjxsix@126.com</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 Jiangsu Huiyi Supply Chain Co., Ltd. All rights reserved.</span>
-        <span>FOB · CIF · DDP · EXW — Amazon FBA supported</span>
+        <span>© 2026 Jiangsu Huiyi Supply Chain Co., Ltd.</span>
       </div>
     </div>
   </footer>
@@ -208,70 +186,42 @@
   <script src="assets/js/products.js"></script>
   <script>
   (function () {
-    /* Ensure products.html always opens at the top (hero visible), not
-       mid-page at the product grid. Disable scroll restoration and reset
-       at multiple lifecycle points to beat late browser restoration. */
     try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) {}
-    function toTop() {
-      try { window.scrollTo({ top: 0, left: 0, behavior: 'instant' }); }
-      catch (e) { window.scrollTo(0, 0); }
-    }
+    function toTop() { window.scrollTo(0, 0); }
     window.addEventListener('load', toTop);
-    window.addEventListener('pageshow', toTop);
-    document.addEventListener('DOMContentLoaded', toTop);
-    requestAnimationFrame(toTop);
-    toTop();
 
     var SW = window.SUNWEAVE;
     var CAT_COLOR = { tropical:'#FF6FA3', boho:'#A98BFF', geo:'#5BD9BB', vintage:'#FFB45C', morandi:'#7FD6FF', animal:'#FFDD73', roundie:'#FF9F1C', seamless:'#A98BFF' };
 
-    /* a random off-screen vector (any angle, distance ≥ ~0.4 viewport) */
     function randDir() {
       var angle = Math.random() * Math.PI * 2;
       var dist = Math.max(window.innerWidth, window.innerHeight) * (0.4 + Math.random() * 0.45);
       return { x: Math.round(Math.cos(angle) * dist), y: Math.round(Math.sin(angle) * dist) };
     }
-    /* fly the (re-rendered) product cards in from random directions */
     function flyInCards() {
       if (!grid) return;
       grid.querySelectorAll('.pw-card.animate-el').forEach(function (card, i) {
-        var d = randDir();
-        card.style.transition = 'none';
-        card.style.setProperty('--in-x', d.x + 'px');
-        card.style.setProperty('--in-y', d.y + 'px');
-        card.classList.remove('in', 'out');
-        void card.offsetWidth; // commit the off-screen start with no transition
-        card.style.transition = '';
-        card.style.setProperty('--delay', (i * 0.04) + 's');
-        card.classList.add('in');
+        var d = randDir(); card.style.transition = 'none';
+        card.style.setProperty('--in-x', d.x + 'px'); card.style.setProperty('--in-y', d.y + 'px');
+        card.classList.remove('in', 'out'); void card.offsetWidth;
+        card.style.transition = ''; card.style.setProperty('--delay', (i * 0.04) + 's'); card.classList.add('in');
       });
     }
 
-    /* ---- Nav scroll background ---- */
     (function () {
       var nav = document.getElementById('nav');
       function onScroll() { nav.classList.toggle('scrolled', window.scrollY > 20); }
       window.addEventListener('scroll', onScroll, { passive: true });
-      onScroll();
     })();
 
-    /* ---- Split the hero title into per-word elements, and each word into per-letter elements ---- */
     function splitIntoChars(el) {
       if (!el) return;
-      var text = el.textContent;
-      el.textContent = '';
-      el.setAttribute('aria-label', text);
+      var text = el.textContent; el.textContent = ''; el.setAttribute('aria-label', text);
       var words = text.split(' ');
       words.forEach(function (word, wi) {
-        var wSpan = document.createElement('span');
-        wSpan.style.display = 'inline-block';
-        wSpan.style.whiteSpace = 'nowrap';
-        wSpan.className = 'word';
+        var wSpan = document.createElement('span'); wSpan.className = 'word';
         for (var i = 0; i < word.length; i++) {
-          var s = document.createElement('span');
-          s.className = 'char animate-el';
-          s.setAttribute('aria-hidden', 'true');
-          s.textContent = word[i];
+          var s = document.createElement('span'); s.className = 'char animate-el'; s.textContent = word[i];
           wSpan.appendChild(s);
         }
         el.appendChild(wSpan);
@@ -280,261 +230,49 @@
     }
     splitIntoChars(document.querySelector('.pw-hero h1'));
 
-    /* ---- Random fly-in / fly-out that replays on every scroll ---- */
     (function () {
       var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      var targets = document.querySelectorAll('.animate-el');
-      if (reduce || !('IntersectionObserver' in window)) {
-        targets.forEach(function (e) { e.classList.add('in'); });
-        return;
-      }
-      // hero title letters cascade fast for an "assemble" feel
-      document.querySelectorAll('.pw-hero h1 .char').forEach(function (el, i) {
-        el.style.setProperty('--delay', (i * 0.022) + 's');
-      });
-      // block-level elements stagger by their own order
-      document.querySelectorAll('.pw-hero, #pwCats').forEach(function (section) {
-        section.querySelectorAll('.animate-el:not(.char)').forEach(function (el, i) {
-          el.style.setProperty('--delay', (i * 0.1) + 's');
-        });
-      });
+      if (reduce || !('IntersectionObserver' in window)) { document.querySelectorAll('.animate-el').forEach(function (e) { e.classList.add('in'); }); return; }
       function animateIn(section) {
         section.querySelectorAll('.animate-el').forEach(function (el) {
-          var d = randDir();
-          el.style.transition = 'none';
-          el.style.setProperty('--in-x', d.x + 'px');
-          el.style.setProperty('--in-y', d.y + 'px');
-          el.classList.remove('in', 'out');
-          void el.offsetWidth;
-          el.style.transition = '';
-          el.classList.add('in');
+          var d = randDir(); el.style.transition = 'none';
+          el.style.setProperty('--in-x', d.x + 'px'); el.style.setProperty('--in-y', d.y + 'px');
+          el.classList.remove('in', 'out'); void el.offsetWidth; el.style.transition = ''; el.classList.add('in');
         });
       }
-      function animateOut(section) {
-        section.querySelectorAll('.animate-el').forEach(function (el) {
-          var d = randDir();
-          el.style.setProperty('--out-x', d.x + 'px');
-          el.style.setProperty('--out-y', d.y + 'px');
-          el.classList.remove('in');
-          el.classList.add('out');
-        });
-      }
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) animateIn(entry.target);
-          else animateOut(entry.target);
-        });
-      }, { threshold: 0.2 });
+      var io = new IntersectionObserver(function (entries) { entries.forEach(function (entry) { if (entry.isIntersecting) animateIn(entry.target); }); }, { threshold: 0.1 });
       document.querySelectorAll('.pw-hero, #pwCats, footer.site-footer').forEach(function (s) { io.observe(s); });
     })();
 
-    /* ---- Build category pills ---- */
     var catsEl = document.getElementById('pwCats');
     var pills = [{ key: 'all', label: 'All', count: SW.PRODUCTS.length }];
-    SW.CATEGORIES.forEach(function (c) {
-      pills.push({ key: c.key, label: c.label, count: SW.productsByCategory(c.key).length });
-    });
+    SW.CATEGORIES.forEach(function (c) { pills.push({ key: c.key, label: c.label, count: SW.productsByCategory(c.key).length }); });
     pills.forEach(function (p, idx) {
-      var b = document.createElement('button');
-      b.className = 'pw-pill' + (p.key === 'all' ? ' active' : '') + ' animate-el';
-      b.style.setProperty('--delay', (idx * 0.06) + 's');
-      b.setAttribute('data-cat', p.key);
-      b.innerHTML = p.label + ' <span class="n">' + p.count + '</span>';
-      b.addEventListener('click', function () { filter(p.key); });
-      catsEl.appendChild(b);
+      var b = document.createElement('button'); b.className = 'pw-pill' + (p.key === 'all' ? ' active' : '') + ' animate-el';
+      b.style.setProperty('--delay', (idx * 0.06) + 's'); b.setAttribute('data-cat', p.key); b.innerHTML = p.label + ' <span class="n">' + p.count + '</span>';
+      b.addEventListener('click', function () { filter(p.key); }); catsEl.appendChild(b);
     });
     document.getElementById('pwCount').textContent = SW.PRODUCTS.length + ' designs · ' + SW.CATEGORIES.length + ' collections';
 
-    /* ---- Render product grid ---- */
     var grid = document.getElementById('pwGrid');
     var empty = document.getElementById('pwEmpty');
-
     function card(p) {
-      var c = SW.getCategory(p.cat);
-      var a = document.createElement('a');
-      a.className = 'pw-card animate-el' + (p.human ? ' human' : '');
-      a.href = 'product.html?id=' + encodeURIComponent(p.id);
-      a.style.setProperty('--c', CAT_COLOR[p.cat] || '#FF6FA3');
-      a.innerHTML =
-        '<div class="ph' + (p.human ? ' human' : '') + '"><span class="badge">' + (c ? c.label : p.cat) + '</span>' +
-        '<img loading="lazy" class="' + (p.human ? 'human' : '') + '" src="' + p.src + '" alt="' + p.name + ' beach towel design"></div>' +
-        '<div class="body"><h3>' + p.name + '</h3>' +
-        '<p class="tag">' + p.tagline + '</p>' +
-        '<span class="more">View details →</span></div>';
+      var c = SW.getCategory(p.cat); var a = document.createElement('a'); a.className = 'pw-card animate-el' + (p.human ? ' human' : '');
+      a.href = 'product.html?id=' + encodeURIComponent(p.id); a.style.setProperty('--c', CAT_COLOR[p.cat] || '#FF6FA3');
+      a.innerHTML = '<div class="ph"><span class="badge">' + (c ? c.label : p.cat) + '</span><img loading="lazy" src="' + p.src + '" alt="' + p.name + '"></div><div class="body"><h3>' + p.name + '</h3><p class="tag">' + p.tagline + '</p><span class="more">View details →</span></div>';
       return a;
     }
-
     function filter(key, initial) {
-      document.querySelectorAll('.pw-pill').forEach(function (b) {
-        b.classList.toggle('active', b.getAttribute('data-cat') === key);
-      });
-      grid.innerHTML = '';
-      var list = key === 'all' ? SW.PRODUCTS : SW.productsByCategory(key);
-      empty.hidden = list.length > 0;
-      list.forEach(function (p) { grid.appendChild(card(p)); });
-      // fly the freshly rendered cards in from random directions
+      document.querySelectorAll('.pw-pill').forEach(function (b) { b.classList.toggle('active', b.getAttribute('data-cat') === key); });
+      grid.innerHTML = ''; var list = key === 'all' ? SW.PRODUCTS : SW.productsByCategory(key);
+      empty.hidden = list.length > 0; list.forEach(function (p) { grid.appendChild(card(p)); });
       flyInCards();
-      if (!initial) {
-        window.scrollTo({ top: document.querySelector('.pw-grid').offsetTop - 80, behavior: 'smooth' });
-      }
+      if (!initial) { window.scrollTo({ top: document.querySelector('.pw-grid').offsetTop - 80, behavior: 'smooth' }); }
     }
-
     filter('all', true);
-  })();
-  </script>
-
-  <script>
-  // ===== Chat concierge (Gemini / DeepSeek multimodal, KB-grounded) =====
-  (function () {
-    var SYSTEM_PROMPT =
-      "You are SUNWEAVE's export sales assistant. SUNWEAVE (Jiangsu Huiyi Supply Chain Co., Ltd.) " +
-      "manufactures and exports premium beach towels (velour, Turkish hammam, microfiber, sand-free picnic blankets) worldwide. " +
-      "Help buyers with: MOQ (from 500 pcs), sampling (15 days), customization (size/weight/print/private label/packaging), " +
-      "materials (organic cotton, recycled microfiber, OEKO-TEX certified), shipping terms (FOB/CIF/DDP) and bulk lead time (~30 days). " +
-      "Be concise, friendly and professional. Reply in English unless the user writes another language. " +
-      "Keep replies under 130 words. If you cannot give a firm quote, invite the customer to leave their email/contact so sales can follow up.";
-
-    var messages = document.getElementById('chatMessages');
-    var form = document.getElementById('chatForm');
-    var input = document.getElementById('chatInput');
-    var sendBtn = document.getElementById('chatSend');
-    var emojiBtn = document.getElementById('emojiBtn');
-    var emojiPicker = document.getElementById('emojiPicker');
-    var emojiGrid = document.getElementById('emojiGrid');
-    var emojiClose = document.getElementById('emojiClose');
-
-    var history = []; // Gemini contents: {role, parts:[{text}]}
-    var cfg = { key: '', model: 'gemini-2.0-flash' };
-    try { cfg.key = localStorage.getItem('sw_gemini_key') || ''; } catch (e) {}
-    try { cfg.model = localStorage.getItem('sw_gemini_model') || cfg.model; } catch (e) {}
-
-    var suggestions = document.getElementById('suggestions');
-    function hideSuggestions() { if (suggestions) suggestions.style.display = 'none'; }
-    document.querySelectorAll('.chip').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        input.value = btn.getAttribute('data-text');
-        hideSuggestions();
-        send();
-      });
-    });
-
-    function addMsg(role, text) {
-      var el = document.createElement('div');
-      el.className = 'msg ' + (role === 'user' ? 'user' : 'bot');
-      var who = document.createElement('span'); who.className = 'who';
-      who.textContent = role === 'user' ? 'You' : 'SUNWEAVE';
-      el.appendChild(who);
-      if (text) { var body = document.createElement('div'); body.textContent = text; el.appendChild(body); }
-      messages.appendChild(el);
-      messages.scrollTop = messages.scrollHeight;
-    }
-    function showTyping() {
-      var el = document.createElement('div'); el.className = 'msg bot'; el.id = 'typing';
-      el.innerHTML = '<span class="who">SUNWEAVE</span><span class="typing"><span></span><span></span><span></span></span>';
-      messages.appendChild(el); messages.scrollTop = messages.scrollHeight;
-    }
-    function removeTyping() { var t = document.getElementById('typing'); if (t) t.remove(); }
-
-    // ----- Emoji picker -----
-    var EMOJIS = ['😊','😉','😍','🥰','😂','😅','😢','😡','👍','👎','👋','🙏','🤝','💪','🎉','❤️','🔥','✅','❌','❓','💡','🌟','✨','🌴','🏖️','🌊','☀️','🌸','🌺','🍍','🐬','🦩','🌵','👙','🕶️','🧴','🛍️','🎁','💰','💵','📦','🚚','✈️','🌐','📞','📧','📝'];
-    function initEmojiPicker() {
-      emojiGrid.innerHTML = '';
-      EMOJIS.forEach(function (emoji) {
-        var b = document.createElement('button');
-        b.type = 'button'; b.textContent = emoji; b.title = emoji;
-        b.addEventListener('click', function () {
-          insertAtCursor(input, emoji);
-          emojiPicker.classList.remove('open');
-          input.focus();
-        });
-        emojiGrid.appendChild(b);
-      });
-      emojiBtn.addEventListener('click', function (e) {
-        e.stopPropagation();
-        emojiPicker.classList.toggle('open');
-        if (emojiPicker.classList.contains('open')) input.focus();
-      });
-      emojiClose.addEventListener('click', function () { emojiPicker.classList.remove('open'); input.focus(); });
-      document.addEventListener('click', function (e) {
-        if (!emojiPicker.contains(e.target) && e.target !== emojiBtn) emojiPicker.classList.remove('open');
-      });
-    }
-    function insertAtCursor(el, text) {
-      var start = el.selectionStart || 0;
-      var end = el.selectionEnd || 0;
-      var val = el.value;
-      el.value = val.slice(0, start) + text + val.slice(end);
-      el.selectionStart = el.selectionEnd = start + text.length;
-    }
-    initEmojiPicker();
-
-    function callGemini(userParts) {
-      var payload = {
-        systemInstruction: { parts: [{ text: SYSTEM_PROMPT }] },
-        contents: history.map(function (m) { return { role: m.role, parts: m.parts }; }),
-        generationConfig: { temperature: 0.7, maxOutputTokens: 700 }
-      };
-      return fetch('/api/chat', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
-        .then(function (r) {
-          if (!r.ok) {
-            return r.json().then(function (e) {
-              var msg = (e && e.error && e.error.message) || JSON.stringify(e);
-              throw new Error('proxy ' + r.status + ': ' + msg);
-            }).catch(function () { throw new Error('proxy ' + r.status); });
-          }
-          return r.json();
-        })
-        .then(function (data) {
-          var c = data && data.candidates && data.candidates[0];
-          var t = c && c.content && c.content.parts && c.content.parts[0] && c.content.parts[0].text;
-          return t || '(no response)';
-        })
-        .catch(function (err) {
-          if (!cfg.key) throw new Error('Backend error: ' + (err.message || 'chat proxy failed') + '. Check the server terminal/logs.');
-          var url = 'https://generativelanguage.googleapis.com/v1beta/models/' + encodeURIComponent(cfg.model) +
-                    ':generateContent?key=' + encodeURIComponent(cfg.key);
-          return fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
-            .then(function (r) {
-              if (!r.ok) return r.json().then(function (e) { throw new Error((e.error && e.error.message) || ('HTTP ' + r.status)); });
-              return r.json();
-            })
-            .then(function (data) {
-              var c = data && data.candidates && data.candidates[0];
-              var t = c && c.content && c.content.parts && c.content.parts[0] && c.content.parts[0].text;
-              return t || '(no response)';
-            });
-        });
-    }
-
-    function send() {
-      var text = input.value.trim();
-      if (!text) return;
-      input.value = '';
-      hideSuggestions();
-
-      var userParts = [{ text: text }];
-      addMsg('user', text);
-      history.push({ role: 'user', parts: userParts });
-
-      sendBtn.disabled = true;
-      showTyping();
-
-      callGemini(userParts).then(function (reply) {
-        removeTyping(); addMsg('bot', reply);
-        history.push({ role: 'model', parts: [{ text: reply }] });
-        sendBtn.disabled = false;
-      }).catch(function (err) {
-        removeTyping();
-        var detail = err.message || 'unknown error';
-        addMsg('bot', "Assistant error: " + detail + ". Please check the terminal for more details.");
-        sendBtn.disabled = false;
-      });
-    }
-    form.addEventListener('submit', function (e) { e.preventDefault(); send(); });
   })();
   </script>
   <script src="assets/js/inquiry-modal.js"></script>
   <script src="assets/js/watermark.js"></script>
 </body>
 </html>
-ml>
