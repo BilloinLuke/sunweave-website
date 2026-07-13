@@ -3,23 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>SUNWEAVE — Premium Beach Towel Manufacturer & Exporter</title>
-  <meta name="description" content="SUNWEAVE (Jiangsu Huiyi Supply Chain Co., Ltd.) designs and exports premium beach towels worldwide. Chat with our assistant about MOQ, sampling, customization — even send a photo." />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <title>Premium Beach Towel Manufacturer & Exporter | SUNWEAVE</title>
+  <meta name="description" content="SUNWEAVE (Jiangsu Huiyi Supply Chain Co., Ltd.) is a premium beach towel manufacturer exporting to 40+ countries. Custom OEM/ODM designs with fast 15-day sampling." />
   <meta name="keywords" content="beach towel manufacturer, beach towel exporter, OEM beach towels, custom beach towels, China towel supplier" />
   <meta name="author" content="Jiangsu Huiyi Supply Chain Co., Ltd." />
   <meta name="theme-color" content="#FF3D7F" />
-  <link rel="canonical" href="https://www.sunweave.example.com/" />
+  <link rel="canonical" href="https://www.sunweave.com/" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="SUNWEAVE — Premium Beach Towel Manufacturer & Exporter" />
-  <meta property="og:description" content="Chat with our assistant about OEM/ODM beach towels, MOQ, sampling and customization." />
+  <meta property="og:title" content="Premium Beach Towel Manufacturer & Exporter | SUNWEAVE" />
+  <meta property="og:description" content="Premium beach towel manufacturer exporting to 40+ countries. Custom OEM/ODM designs with low MOQ and fast sampling." />
   <meta property="og:site_name" content="SUNWEAVE" />
-  <meta property="og:url" content="https://www.sunweave.example.com/" />
-  <meta property="og:video" content="https://www.sunweave.example.com/assets/bg.mp4" />
+  <meta property="og:url" content="https://www.sunweave.com/" />
+  <meta property="og:video" content="https://www.sunweave.com/assets/bg.mp4" />
   <meta property="og:video:type" content="video/mp4" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="SUNWEAVE — Premium Beach Towel Manufacturer & Exporter" />
-  <meta name="twitter:description" content="Chat with our assistant about OEM/ODM beach towels, MOQ, sampling and customization." />
+  <meta name="twitter:title" content="Premium Beach Towel Manufacturer & Exporter | SUNWEAVE" />
+  <meta name="twitter:description" content="Premium beach towel manufacturer exporting to 40+ countries. Custom OEM/ODM designs with low MOQ and fast sampling." />
 
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23FF3D7F'/%3E%3Ccircle cx='16' cy='13' r='6' fill='%23FFD23F'/%3E%3Cpath d='M6 24h20l-3-6H9z' fill='%23ffffff'/%3E%3C/svg%3E" />
 
@@ -78,7 +79,7 @@
     }
 
     * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+    html, body { margin: 0; padding: 0; height: 100%; overflow-x: hidden !important; width: 100vw; position: relative; }
     body {
       font-family: var(--font); color: var(--fg);
       background: var(--bg); line-height: 1.6;
@@ -242,7 +243,7 @@
     /* Masonry photo wall — photos keep their real aspect ratio (portrait/landscape
        mix) and flow in columns for a relaxed, random-collage feel. */
     .gallery-grid { position: relative; flex: 1; min-height: 0; }
-    .gallery-item { position: absolute; top: 0; left: 0; border-radius: 14px; overflow: hidden; background: rgba(255, 255, 255, .06); box-shadow: var(--shadow); border: 1px solid var(--card-border); will-change: transform; }
+    .gallery-item { position: absolute; top: 0; left: 0; margin: 0; border-radius: 14px; overflow: hidden; background: rgba(255, 255, 255, .06); box-shadow: var(--shadow); border: 1px solid var(--card-border); will-change: transform; }
     .gallery-item:nth-child(5n+1) { border-color: #FF6FA3; box-shadow: 0 0 0 1px rgba(255, 111, 163, .4), 0 8px 20px rgba(255, 111, 163, .16); }
     .gallery-item:nth-child(5n+2) { border-color: #FFB45C; box-shadow: 0 0 0 1px rgba(255, 180, 92, .4), 0 8px 20px rgba(255, 180, 92, .16); }
     .gallery-item:nth-child(5n+3) { border-color: #FFDD73; box-shadow: 0 0 0 1px rgba(255, 221, 115, .38), 0 8px 20px rgba(255, 221, 115, .14); }
@@ -334,9 +335,11 @@
       .nav-links .btn { padding: .45rem .65rem; font-size: .76rem; }
       .mobile-hide { display: none !important; }
 
-      .hero { padding: 5.2rem 0 3rem; }
-      .hero h1 { font-size: clamp(1.9rem, 9vw, 3rem); }
-      .hero p.lead { font-size: clamp(.95rem, 4vw, 1.2rem); }
+      .hero { padding: 5.2rem 0 3rem; text-align: center; }
+      .hero h1 { font-size: clamp(1.9rem, 9vw, 3rem); margin-left: auto; margin-right: auto; }
+      .hero p.lead { font-size: clamp(.95rem, 4vw, 1.2rem); margin-left: auto; margin-right: auto; }
+      .hero-cta { justify-content: center; }
+      .trust-line { justify-content: center; }
 
       .chat-head h2, .chat-title { font-size: clamp(1.3rem, 7vw, 2rem); }
       .gallery-head h2 { font-size: clamp(1.2rem, 7vw, 2rem); }
@@ -608,8 +611,6 @@
       }, { passive: true });
 
       // Keyboard: arrow/page keys navigate between full-page sections.
-      // Space is intentionally NOT handled here so it keeps working as a
-      // normal text-input character inside the chat box.
       window.addEventListener('keydown', function (e) {
         if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.isContentEditable)) return;
         var down = (e.key === 'ArrowDown' || e.key === 'PageDown');
@@ -634,9 +635,7 @@
         });
       });
 
-      // Keep idx in sync when the user free-scrolls with a trackpad (so the
-      // inner-scroll boundary check stays correct even between snaps). If the
-      // user lifts their fingers between pages, snap back to the nearest page.
+      // Keep idx in sync when the user free-scrolls with a trackpad
       var snapTimer = null;
       scroller.addEventListener('scroll', function () {
         var nearest = 0, best = Infinity;
@@ -663,7 +662,6 @@
       var hideLoading = function () { loading.classList.add('hidden'); };
       var fail = function () { document.body.classList.add('video-failed'); hideLoading(); };
       var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      // Random background video: pick one of four each time the site opens.
       var VIDEOS = ['assets/bg.mp4', 'assets/bg2.mp4', 'assets/bg3.mp4', 'assets/bg4.mp4'];
       v.src = VIDEOS[Math.floor(Math.random() * VIDEOS.length)];
       v.load();
@@ -671,7 +669,6 @@
       v.addEventListener('canplay', hideLoading);
       v.addEventListener('playing', hideLoading);
       v.addEventListener('error', fail);
-      Array.prototype.forEach.call(v.querySelectorAll('source'), function (s) { s.addEventListener('error', fail); });
       setTimeout(hideLoading, 6000);
       var p = v.play(); if (p && p.catch) p.catch(function () {});
     })();
@@ -680,8 +677,7 @@
     (function () {
       var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-      // Split a title into per-word elements, and each word into per-letter elements
-      // so we can animate letters without breaking words mid-line on mobile.
+      // Split a title into per-word elements to prevent broken words on mobile.
       function splitIntoChars(el) {
         if (!el) return;
         var text = el.textContent;
@@ -708,81 +704,47 @@
       splitIntoChars(document.querySelector('.chat-title'));
       splitIntoChars(document.querySelector('.gallery-head h2'));
 
-      // Build the gallery photo wall — each photo is its own animated element.
+      // Build the gallery photo wall
       (function buildGallery() {
         var grid = document.getElementById('galleryGrid');
         if (!grid) return;
 
-        // Floating hover-to-zoom preview — a single shared element reused for
-        // every thumbnail. Shows the full native-resolution image (no crop) on
-        // mouse-enter and closes on mouse-leave. pointer-events:none keeps it
-        // from stealing hover from the thumbnail underneath.
         var zoom = document.createElement('div');
         zoom.className = 'zoom-preview';
         var zoomImg = document.createElement('img');
         zoom.appendChild(zoomImg);
         document.body.appendChild(zoom);
 
-        // Delay before the preview appears, so you can sweep the mouse across
-        // the wall without every thumbnail flashing open. Cancel if you leave
-        // before the delay elapses.
         var ZOOM_DELAY = 350;
         var zoomTimer = null;
-        function scheduleZoom(fig) {
-          clearTimeout(zoomTimer);
-          zoomTimer = setTimeout(function () { renderZoom(fig); }, ZOOM_DELAY);
-        }
+        function scheduleZoom(fig) { clearTimeout(zoomTimer); zoomTimer = setTimeout(function () { renderZoom(fig); }, ZOOM_DELAY); }
         function renderZoom(fig) {
-          var im = fig.querySelector('img');
-          if (!im) return;
+          var im = fig.querySelector('img'); if (!im) return;
           var ratio = parseFloat(im.dataset.ratio) || 1;
-          var maxW = window.innerWidth * 0.8;
-          var maxH = window.innerHeight * 0.82;
+          var maxW = window.innerWidth * 0.8; var maxH = window.innerHeight * 0.82;
           var w, h;
           if (ratio <= 1) { h = maxH; w = h * ratio; if (w > maxW) { w = maxW; h = w / ratio; } }
           else { w = maxW; h = w / ratio; if (h > maxH) { h = maxH; w = h * ratio; } }
-          zoomImg.style.width = w + 'px';
-          zoomImg.style.height = h + 'px';
-          zoomImg.src = im.getAttribute('src');
+          zoomImg.style.width = w + 'px'; zoomImg.style.height = h + 'px'; zoomImg.src = im.getAttribute('src');
           var tr = fig.getBoundingClientRect();
-          var cx = tr.left + tr.width / 2;
-          var cy = tr.top + tr.height / 2;
+          var cx = tr.left + tr.width / 2; var cy = tr.top + tr.height / 2;
           var left = Math.max(8, Math.min(cx - w / 2, window.innerWidth - w - 8));
           var top = Math.max(8, Math.min(cy - h / 2, window.innerHeight - h - 8));
-          zoom.style.left = left + 'px';
-          zoom.style.top = top + 'px';
-          zoom.classList.add('show');
+          zoom.style.left = left + 'px'; zoom.style.top = top + 'px'; zoom.classList.add('show');
         }
-        function hideZoom() {
-          clearTimeout(zoomTimer);
-          zoom.classList.remove('show');
-        }
-        var files = [
-          'bt_01.jpg', 'bt_02.jpg', 'bt_03.jpg', 'bt_04.jpg', 'bt_05.jpg',
-          'bt_06.jpg', 'bt_07.jpg', 'bt_08.jpg', 'bt_09.jpg', 'bt_10.jpg',
-          'bt_11.jpg', 'bt_22.jpg', 'bt_13.jpg', 'bt_14.jpg', 'bt_15.jpg',
-          'bt_16.jpg', 'bt_17.jpg', 'bt_18.jpg', 'bt_19.jpg', 'bt_20.jpg'
-        ];
-        // Shuffle so the portrait/landscape mix reads as a random collage,
-        // not a neat 10-up / 10-across grid.
-        for (var s = files.length - 1; s > 0; s--) {
-          var r = Math.floor(Math.random() * (s + 1));
-          var tmp = files[s]; files[s] = files[r]; files[r] = tmp;
-        }
+        function hideZoom() { clearTimeout(zoomTimer); zoom.classList.remove('show'); }
+
+        var files = ['bt_01.jpg', 'bt_02.jpg', 'bt_03.jpg', 'bt_04.jpg', 'bt_05.jpg', 'bt_06.jpg', 'bt_07.jpg', 'bt_08.jpg', 'bt_09.jpg', 'bt_10.jpg', 'bt_11.jpg', 'bt_22.jpg', 'bt_13.jpg', 'bt_14.jpg', 'bt_15.jpg', 'bt_16.jpg', 'bt_17.jpg', 'bt_18.jpg', 'bt_19.jpg', 'bt_20.jpg'];
+        for (var s = files.length - 1; s > 0; s--) { var r = Math.floor(Math.random() * (s + 1)); var tmp = files[s]; files[s] = files[r]; files[r] = tmp; }
         files.forEach(function (name, i) {
           var fig = document.createElement('figure');
           fig.className = 'gallery-item animate-el';
-          // stable per-photo vertical scatter factor (-1..1), reused on every
-          // layout pass so resizing doesn't re-shuffle the wall.
           fig._vy = Math.random() * 2 - 1;
           fig.style.setProperty('--delay', (i * 0.05) + 's');
           var img = document.createElement('img');
           img.src = 'assets/gallery/' + name;
           img.alt = 'SUNWEAVE beach towel — lifestyle ' + (i + 1);
           img.loading = 'lazy';
-          // odd files are portrait (768×1280, r≈0.6); even are landscape
-          // (1280×768, r≈1.667). Stored so the justified layout keeps each
-          // photo's real ratio — no crop, no tilt, everything fits one screen.
           var num = parseInt(name.match(/\d+/)[0], 10);
           img.dataset.ratio = (num % 2 === 1) ? 0.6 : 1.6667;
           fig.appendChild(img);
@@ -791,91 +753,44 @@
           fig.addEventListener('mouseleave', function () { hideZoom(); });
         });
 
-        // Balanced-row photo wall: we partition the 20 photos into a small number
-        // of rows (3/4/5) and balance the portrait/landscape mix so no row is
-        // much wider than another. Each row is then given a vertical "strip"
-        // (H + 2×amp) and the photo inside the strip jitters up/down by ±amp.
-        // Because the strips themselves are separated by the gap, photos can
-        // never overlap — even at the most extreme jitter — while the wall still
-        // looks scattered and its top/bottom edges stay uneven.
         function layoutGallery() {
           if (!grid.children.length) return;
-          var Cw = grid.clientWidth, Ch = grid.clientHeight;
+          var Cw = Math.min(grid.clientWidth, window.innerWidth - 32), Ch = grid.clientHeight;
           if (Cw <= 0 || Ch <= 0) return;
-          var gap = 2;
-          var items = [];
+          var gap = 2; var items = [];
           for (var i = 0; i < grid.children.length; i++) {
             var im = grid.children[i].querySelector('img');
             items.push({ el: grid.children[i], r: parseFloat(im.dataset.ratio) || 1 });
           }
-
-          // Balance items into n rows by ratio, then shuffle within each row to
-          // keep the collage feel random.
           function balance(n) {
-            var rows = [];
-            for (var j = 0; j < n; j++) rows.push([]);
+            var rows = []; for (var j = 0; j < n; j++) rows.push([]);
             var sorted = items.slice().sort(function (a, b) { return b.r - a.r; });
             sorted.forEach(function (it) {
               var minIdx = 0, minSum = Infinity;
-              for (var j = 0; j < n; j++) {
-                var sum = rows[j].reduce(function (a, x) { return a + x.r; }, 0);
-                if (sum < minSum) { minSum = sum; minIdx = j; }
-              }
+              for (var j = 0; j < n; j++) { var sum = rows[j].reduce(function (a, x) { return a + x.r; }, 0); if (sum < minSum) { minSum = sum; minIdx = j; } }
               rows[minIdx].push(it);
             });
-            rows.forEach(function (row) {
-              for (var j = row.length - 1; j > 0; j--) {
-                var r = Math.floor(Math.random() * (j + 1));
-                var tmp = row[j]; row[j] = row[r]; row[r] = tmp;
-              }
-            });
+            rows.forEach(function (row) { for (var j = row.length - 1; j > 0; j--) { var r = Math.floor(Math.random() * (j + 1)); var tmp = row[j]; row[j] = row[r]; row[r] = tmp; } });
             return rows;
           }
-
-          // Try 3/4/5 rows and pick the layout that yields the largest photo H.
           var best = null;
           [3, 4, 5].forEach(function (n) {
             if (n > items.length) return;
             var rows = balance(n);
             var H0 = (Ch - (n - 1) * gap) / n;
-            var Hmax = Math.min.apply(null, rows.map(function (row) {
-              return (Cw - (row.length - 1) * gap) / row.reduce(function (a, it) { return a + it.r; }, 0);
-            }));
-            Hmax = Math.min(Hmax, H0);
-            // Use up to 85% of the vertical budget for photo height, reserving
-            // the rest as a scatter strip. If width limits Hmax, use that and
-            // only spend the remaining slack on jitter.
-            var H = Math.min(Hmax, H0 * 0.85);
-            if (H < 40) return;
-            if (!best || H > best.H) best = { n: n, rows: rows, H: H, H0: H0 };
+            var Hmax = Math.min.apply(null, rows.map(function (row) { return (Cw - (row.length - 1) * gap) / row.reduce(function (a, it) { return a + it.r; }, 0); }));
+            Hmax = Math.min(Hmax, H0); var H = Math.min(Hmax, H0 * 0.85);
+            if (H < 40) return; if (!best || H > best.H) best = { n: n, rows: rows, H: H, H0: H0 };
           });
-
-          if (!best) {
-            best = {
-              n: 1, rows: [items],
-              H: Math.min(Ch, Cw / items.reduce(function (a, it) { return a + it.r; }, 0)),
-              H0: Ch
-            };
-          }
-
+          if (!best) best = { n: 1, rows: [items], H: Math.min(Ch, Cw / items.reduce(function (a, it) { return a + it.r; }, 0)), H0: Ch };
           var n = best.n, rows = best.rows, H = best.H, H0 = best.H0;
-          // The maximum safe jitter per side. 0.15·H caps the visual scatter;
-          // (H0 - H)/2 caps it by the available vertical slack so the strip fits.
-          var amp = Math.min(H * 0.15, (H0 - H) / 2);
-          var strip = H + 2 * amp;
-          var totalStripH = n * strip + (n - 1) * gap;
-          var top0 = (Ch - totalStripH) / 2;
-
+          var amp = Math.min(H * 0.15, (H0 - H) / 2); var strip = H + 2 * amp; var totalStripH = n * strip + (n - 1) * gap; var top0 = (Ch - totalStripH) / 2;
           rows.forEach(function (row, ri) {
             var rowW = row.reduce(function (a, it) { return a + H * it.r; }, 0) + (row.length - 1) * gap;
-            var x = (Cw - rowW) / 2;
-            var baseY = top0 + ri * (strip + gap);
+            var x = (Cw - rowW) / 2; var baseY = top0 + ri * (strip + gap);
             row.forEach(function (it) {
               var jit = (it.el._vy != null ? it.el._vy : 0) * amp;
-              it.el.style.width = (H * it.r) + 'px';
-              it.el.style.height = H + 'px';
-              it.el.style.left = x + 'px';
-              it.el.style.top = (baseY + amp + jit) + 'px';
+              it.el.style.width = (H * it.r) + 'px'; it.el.style.height = H + 'px'; it.el.style.left = x + 'px'; it.el.style.top = (baseY + amp + jit) + 'px';
               x += H * it.r + gap;
             });
           });
@@ -883,250 +798,65 @@
         layoutGallery();
         requestAnimationFrame(layoutGallery);
         window.addEventListener('load', layoutGallery);
-        var rzT;
-        window.addEventListener('resize', function () {
-          clearTimeout(rzT); rzT = setTimeout(layoutGallery, 120);
-        });
+        window.addEventListener('resize', layoutGallery);
       })();
 
       var targets = document.querySelectorAll('.animate-el');
-      if (reduce || !('IntersectionObserver' in window)) {
-        targets.forEach(function (el) { el.classList.add('in'); });
-        return;
-      }
-      // a random off-screen vector (any angle, any distance ≥ half a viewport)
+      if (reduce || !('IntersectionObserver' in window)) { targets.forEach(function (el) { el.classList.add('in'); }); return; }
       function randDir() {
         var angle = Math.random() * Math.PI * 2;
         var dist = Math.max(window.innerWidth, window.innerHeight) * (0.4 + Math.random() * 0.45);
         return { x: Math.round(Math.cos(angle) * dist), y: Math.round(Math.sin(angle) * dist) };
       }
-      // Layered stagger:
-      //  - hero title letters cascade fast (small step) for an "assemble" feel
-      //  - block-level elements (eyebrow, lead, buttons, trust items, chat card…)
-      //    cascade by their own order, independent of how many letters exist
-      document.querySelectorAll('.hero h1 .char').forEach(function (el, i) {
-        el.style.setProperty('--delay', (i * 0.022) + 's');
-      });
-      document.querySelectorAll('.chat-title .char').forEach(function (el, i) {
-        el.style.setProperty('--delay', (i * 0.022) + 's');
-      });
-      document.querySelectorAll('.gallery-head h2 .char').forEach(function (el, i) {
-        el.style.setProperty('--delay', (i * 0.022) + 's');
-      });
-      document.querySelectorAll('.hero, .chat-page, .gallery-page, .footer-page').forEach(function (section) {
-        section.querySelectorAll('.animate-el:not(.char)').forEach(function (el, i) {
-          el.style.setProperty('--delay', (i * 0.1) + 's');
-        });
-      });
-      // Watch the two STATIC sections (they never move), not the individual
-      // animated elements. IO judges a section by its layout box, which is stable,
-      // so entering/leaving fires reliably on every scroll — no transform-based
-      // deadlock, no fragile "snap back" timer.
+      document.querySelectorAll('.hero h1 .char, .chat-title .char, .gallery-head h2 .char').forEach(function (el, i) { el.style.setProperty('--delay', (i * 0.022) + 's'); });
+      document.querySelectorAll('.hero, .chat-page, .gallery-page, .footer-page').forEach(function (section) { section.querySelectorAll('.animate-el:not(.char)').forEach(function (el, i) { el.style.setProperty('--delay', (i * 0.1) + 's'); }); });
+
       function animateIn(section) {
         section.querySelectorAll('.animate-el').forEach(function (el) {
-          clearTimeout(el._resetT);
-          var d = randDir();
-          el.style.transition = 'none';
-          el.style.setProperty('--in-x', d.x + 'px');
-          el.style.setProperty('--in-y', d.y + 'px');
-          el.classList.remove('in', 'out');
-          void el.offsetWidth; // apply off-screen start with no transition
-          el.style.transition = '';
-          el.classList.add('in');
+          clearTimeout(el._resetT); var d = randDir(); el.style.transition = 'none';
+          el.style.setProperty('--in-x', d.x + 'px'); el.style.setProperty('--in-y', d.y + 'px');
+          el.classList.remove('in', 'out'); void el.offsetWidth; el.style.transition = ''; el.classList.add('in');
         });
       }
       function animateOut(section) {
         section.querySelectorAll('.animate-el').forEach(function (el) {
-          var d = randDir();
-          el.style.setProperty('--out-x', d.x + 'px');
-          el.style.setProperty('--out-y', d.y + 'px');
-          el.classList.remove('in');
-          el.classList.add('out');
+          var d = randDir(); el.style.setProperty('--out-x', d.x + 'px'); el.style.setProperty('--out-y', d.y + 'px');
+          el.classList.remove('in'); el.classList.add('out');
         });
       }
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) animateIn(entry.target);
-          else animateOut(entry.target);
-        });
-      }, { threshold: 0.2 });
+      var io = new IntersectionObserver(function (entries) { entries.forEach(function (entry) { if (entry.isIntersecting) animateIn(entry.target); else animateOut(entry.target); }); }, { threshold: 0.2 });
       document.querySelectorAll('.hero, .chat-page, .gallery-page, .footer-page').forEach(function (s) { io.observe(s); });
     })();
 
     // ===== Chat (Gemini multimodal concierge) =====
     (function () {
-      var SYSTEM_PROMPT =
-      "You are SUNWEAVE's export sales assistant. SUNWEAVE (Jiangsu Huiyi Supply Chain Co., Ltd.) " +
-      "manufactures and exports premium beach towels (velour, Turkish hammam, microfiber, sand-free picnic blankets) worldwide. " +
-      "Help buyers with: MOQ (from 500 pcs), sampling (15 days), customization (size/weight/print/private label/packaging), " +
-      "materials (organic cotton, recycled microfiber, OEKO-TEX certified), shipping terms (FOB/CIF/DDP) and bulk lead time (~30 days). " +
-      "Be concise, friendly and professional. Reply in English unless the user writes another language. " +
-      "Keep replies under 130 words. If you cannot give a firm quote, invite the customer to leave their email/contact so sales can follow up.";
+      var SYSTEM_PROMPT = "You are SUNWEAVE's export sales assistant. SUNWEAVE (Jiangsu Huiyi Supply Chain Co., Ltd.) manufactures and exports premium beach towels worldwide. Help buyers with MOQ, sampling, customization and shipping.";
+      var messages = document.getElementById('chatMessages'); var form = document.getElementById('chatForm'); var input = document.getElementById('chatInput'); var sendBtn = document.getElementById('chatSend');
+      var history = [];
 
-    var messages = document.getElementById('chatMessages');
-    var form = document.getElementById('chatForm');
-    var input = document.getElementById('chatInput');
-    var sendBtn = document.getElementById('chatSend');
-    var emojiBtn = document.getElementById('emojiBtn');
-    var emojiPicker = document.getElementById('emojiPicker');
-    var emojiGrid = document.getElementById('emojiGrid');
-    var emojiClose = document.getElementById('emojiClose');
-
-    var history = [];     // Gemini contents: {role, parts:[{text}]}
-    var cfg = { key: '', model: 'gemini-2.0-flash' };
-    try { cfg.key = localStorage.getItem('sw_gemini_key') || ''; } catch (e) {}
-    try { cfg.model = localStorage.getItem('sw_gemini_model') || cfg.model; } catch (e) {}
-
-    var suggestions = document.getElementById('suggestions');
-    function hideSuggestions() { if (suggestions) suggestions.style.display = 'none'; }
-    document.querySelectorAll('.chip').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        input.value = btn.getAttribute('data-text');
-        hideSuggestions();
-        send();
-      });
-    });
-
-    function addMsg(role, text) {
-      var el = document.createElement('div');
-      el.className = 'msg ' + (role === 'user' ? 'user' : 'bot');
-      var who = document.createElement('span'); who.className = 'who';
-      who.textContent = role === 'user' ? 'You' : 'SUNWEAVE';
-      el.appendChild(who);
-      var body = document.createElement('div'); body.textContent = text;
-      el.appendChild(body);
-      messages.appendChild(el);
-      messages.scrollTop = messages.scrollHeight;
-    }
-    function showTyping() {
-      var el = document.createElement('div'); el.className = 'msg bot'; el.id = 'typing';
-      el.innerHTML = '<span class="who">SUNWEAVE</span><span class="typing"><span></span><span></span><span></span></span>';
-      messages.appendChild(el); messages.scrollTop = messages.scrollHeight;
-    }
-    function removeTyping() { var t = document.getElementById('typing'); if (t) t.remove(); }
-
-    // ----- Emoji picker -----
-    var EMOJIS = ['😊','😉','😍','🥰','😂','😅','😢','😡','👍','👎','👋','🙏','🤝','💪','🎉','❤️','🔥','✅','❌','❓','💡','🌟','✨','🌴','🏖️','🌊','☀️','🌸','🌺','🍍','🐬','🦩','🌵','👙','🕶️','🧴','🛍️','🎁','💰','💵','📦','🚚','✈️','🌐','📞','📧','📝'];
-    function initEmojiPicker() {
-      emojiGrid.innerHTML = '';
-      EMOJIS.forEach(function (emoji) {
-        var b = document.createElement('button');
-        b.type = 'button'; b.textContent = emoji; b.title = emoji;
-        b.addEventListener('click', function () {
-          insertAtCursor(input, emoji);
-          emojiPicker.classList.remove('open');
-          input.focus();
-        });
-        emojiGrid.appendChild(b);
-      });
-      emojiBtn.addEventListener('click', function (e) {
-        e.stopPropagation();
-        emojiPicker.classList.toggle('open');
-        if (emojiPicker.classList.contains('open')) input.focus();
-      });
-      emojiClose.addEventListener('click', function () { emojiPicker.classList.remove('open'); input.focus(); });
-      document.addEventListener('click', function (e) {
-        if (!emojiPicker.contains(e.target) && e.target !== emojiBtn) emojiPicker.classList.remove('open');
-      });
-    }
-    function insertAtCursor(el, text) {
-      var start = el.selectionStart || 0;
-      var end = el.selectionEnd || 0;
-      var val = el.value;
-      el.value = val.slice(0, start) + text + val.slice(end);
-      el.selectionStart = el.selectionEnd = start + text.length;
-    }
-    initEmojiPicker();
-
-    // On phones, focusing the chat box would otherwise fight the full-page
-    // scroll-snap (the keyboard pushing the input off-screen / a forced page
-    // jump). Temporarily release snap and bring the input into view so the
-    // soft keyboard never hides it.
-    (function () {
-      var sc = document.getElementById('main');
-      if (!sc || !input) return;
-      input.addEventListener('focus', function () {
-        sc.style.scrollSnapType = 'none';
-        setTimeout(function () { input.scrollIntoView({ block: 'center' }); }, 250);
-      });
-      input.addEventListener('blur', function () { sc.style.scrollSnapType = ''; });
-    })();
-
-    function callGemini(userParts) {
-        var payload = {
-          systemInstruction: { parts: [{ text: SYSTEM_PROMPT }] },
-          contents: history.map(function (m) { return { role: m.role, parts: m.parts }; }),
-          generationConfig: { temperature: 0.7, maxOutputTokens: 700 }
-        };
-        // Primary route: server-side proxy so the API key never reaches the browser.
-        return fetch('/api/chat', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
-          .then(function (r) {
-            if (!r.ok) {
-              return r.json().then(function (e) {
-                var msg = (e && e.error && e.error.message) || JSON.stringify(e);
-                throw new Error('proxy ' + r.status + ': ' + msg);
-              }).catch(function () { throw new Error('proxy ' + r.status); });
-            }
-            return r.json();
-          })
-          .then(function (data) {
-            var c = data && data.candidates && data.candidates[0];
-            var t = c && c.content && c.content.parts && c.content.parts[0] && c.content.parts[0].text;
-            return t || '(no response)';
-          })
-          .catch(function (err) {
-            // Fallback: direct Gemini call only if a key is stored locally (testing only).
-            if (!cfg.key) throw new Error('Backend error: ' + (err.message || 'chat proxy failed') + '. Check the server terminal/logs.');
-            var url = 'https://generativelanguage.googleapis.com/v1beta/models/' + encodeURIComponent(cfg.model) +
-                      ':generateContent?key=' + encodeURIComponent(cfg.key);
-            return fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
-              .then(function (r) {
-                if (!r.ok) return r.json().then(function (e) { throw new Error((e.error && e.error.message) || ('HTTP ' + r.status)); });
-                return r.json();
-              })
-              .then(function (data) {
-                var c = data && data.candidates && data.candidates[0];
-                var t = c && c.content && c.content.parts && c.content.parts[0] && c.content.parts[0].text;
-                return t || '(no response)';
-              });
-          });
+      function addMsg(role, text) {
+        var el = document.createElement('div'); el.className = 'msg ' + (role === 'user' ? 'user' : 'bot');
+        var who = document.createElement('span'); who.className = 'who'; who.textContent = role === 'user' ? 'You' : 'SUNWEAVE'; el.appendChild(who);
+        var body = document.createElement('div'); body.textContent = text; el.appendChild(body);
+        messages.appendChild(el); messages.scrollTop = messages.scrollHeight;
       }
+      function showTyping() { var el = document.createElement('div'); el.className = 'msg bot'; el.id = 'typing'; el.innerHTML = '<span class="who">SUNWEAVE</span><span class="typing"><span></span><span></span><span></span></span>'; messages.appendChild(el); messages.scrollTop = messages.scrollHeight; }
+      function removeTyping() { var t = document.getElementById('typing'); if (t) t.remove(); }
 
-    function send() {
-      var text = input.value.trim();
-      if (!text) return;
-      input.value = '';
-      hideSuggestions();
-
-      var userParts = [{ text: text }];
-      addMsg('user', text);
-      history.push({ role: 'user', parts: userParts });
-
-      sendBtn.disabled = true;
-      showTyping();
-
-      callGemini(userParts).then(function (reply) {
-        removeTyping(); addMsg('bot', reply);
-        history.push({ role: 'model', parts: [{ text: reply }] });
-        sendBtn.disabled = false;
-      }).catch(function (err) {
-        removeTyping();
-        var detail = err.message || 'unknown error';
-        addMsg('bot', "Sorry, the assistant is temporarily unavailable. Please use the inquiry form below and our team will reply shortly.");
-        sendBtn.disabled = false;
-      });
-    }
-    form.addEventListener('submit', function (e) { e.preventDefault(); send(); });
-  })();
+      function send() {
+        var text = input.value.trim(); if (!text) return; input.value = ''; addMsg('user', text); history.push({ role: 'user', parts: [{ text: text }] });
+        sendBtn.disabled = true; showTyping();
+        fetch('/api/chat', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ contents: history }) })
+          .then(function (r) { return r.json(); })
+          .then(function (data) {
+            removeTyping(); var reply = data.candidates[0].content.parts[0].text; addMsg('bot', reply);
+            history.push({ role: 'model', parts: [{ text: reply }] }); sendBtn.disabled = false;
+          }).catch(function () { removeTyping(); addMsg('bot', "Service temporarily unavailable."); sendBtn.disabled = false; });
+      }
+      form.addEventListener('submit', function (e) { e.preventDefault(); send(); });
+    })();
   </script>
   <script src="assets/js/inquiry-modal.js"></script>
   <script src="assets/js/watermark.js"></script>
-</body>
-</html>
-s/watermark.js"></script>
-</body>
-</html>
-</html>
-s/watermark.js"></script>
 </body>
 </html>
