@@ -352,7 +352,6 @@
     }
     @media (prefers-reduced-motion: reduce) {
       * { animation: none !important; transition: none !important; }
-      #bgVideo { display: none; }
       .animate-el { opacity: 1 !important; transform: none !important; }
     }
 
@@ -385,6 +384,7 @@
       .site-watermark span { font-size: clamp(0.9rem, 4.5vw, 1.4rem); }
     }
   </style>
+
   <script>
     /* 深浅模式按系统本地时间自动切换：6:00–17:59 浅色，18:00–05:59 深色；每分钟自检一次 */
     (function () {
