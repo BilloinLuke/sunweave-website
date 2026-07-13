@@ -680,24 +680,28 @@
     (function () {
       var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-      // Split a title into per-letter elements so each letter is its own animated
-      // unit (flies in/out independently from a random direction).
+      // Split a title into per-word elements, and each word into per-letter elements
+      // so we can animate letters without breaking words mid-line on mobile.
       function splitIntoChars(el) {
         if (!el) return;
         var text = el.textContent;
         el.textContent = '';
         el.setAttribute('aria-label', text);
-        for (var i = 0; i < text.length; i++) {
-          var ch = text[i];
-          // a normal space: keep as a breakable text node (not animated, so the
-          // title still wraps naturally between words)
-          if (ch === ' ') { el.appendChild(document.createTextNode(' ')); continue; }
-          var s = document.createElement('span');
-          s.className = 'char animate-el';
-          s.setAttribute('aria-hidden', 'true');
-          s.textContent = ch;
-          el.appendChild(s);
-        }
+        var words = text.split(' ');
+        words.forEach(function (word, wi) {
+          var wSpan = document.createElement('span');
+          wSpan.style.display = 'inline-block';
+          wSpan.style.whiteSpace = 'nowrap';
+          for (var i = 0; i < word.length; i++) {
+            var s = document.createElement('span');
+            s.className = 'char animate-el';
+            s.setAttribute('aria-hidden', 'true');
+            s.textContent = word[i];
+            wSpan.appendChild(s);
+          }
+          el.appendChild(wSpan);
+          if (wi < words.length - 1) el.appendChild(document.createTextNode(' '));
+        });
         el.style.visibility = 'visible';
       }
       splitIntoChars(document.querySelector('.hero h1'));
@@ -1118,6 +1122,10 @@
   <script src="assets/js/inquiry-modal.js"></script>
   <script src="assets/js/watermark.js"></script>
 </body>
+</html>
+s/watermark.js"></script>
+</body>
+</html>
 </html>
 s/watermark.js"></script>
 </body>
