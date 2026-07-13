@@ -143,8 +143,29 @@
     var G = SW.GLOBAL;
     var color = CAT_COLOR[p.cat] || '#FF6FA3';
 
-    /* ---- SEO: title + description ---- */
-    document.title = p.name + ' — SUNWEAVE ' + (cat ? cat.label : 'Beach Towel');
+    /* ---- Split the hero title into per-word elements, and each word into per-letter elements ---- */
+    function splitIntoChars(el) {
+      if (!el) return;
+      var text = el.textContent;
+      el.textContent = '';
+      el.setAttribute('aria-label', text);
+      var words = text.split(' ');
+      words.forEach(function (word, wi) {
+        var wSpan = document.createElement('span');
+        wSpan.style.display = 'inline-block';
+        wSpan.style.whiteSpace = 'nowrap';
+        wSpan.className = 'word';
+        for (var i = 0; i < word.length; i++) {
+          var s = document.createElement('span');
+          s.className = 'char animate-el';
+          s.setAttribute('aria-hidden', 'true');
+          s.textContent = word[i];
+          wSpan.appendChild(s);
+        }
+        el.appendChild(wSpan);
+        if (wi < words.length - 1) el.appendChild(document.createTextNode(' '));
+      });
+    }
     var mdesc = document.querySelector('meta[name="description"]');
     if (mdesc) mdesc.setAttribute('content', p.name + ': ' + p.tagline + ' ' + (cat ? cat.blurb : '') + ' OEM/ODM customizable with low MOQ.');
 
