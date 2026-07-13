@@ -1,0 +1,99 @@
+// Generates kb-template.csv — a Google-Sheets-ready knowledge base for the
+// SUNWEAVE beach-towel export site. Run: node tools/gen_kb.js
+const fs = require('fs');
+const path = require('path');
+
+const ROWS = [
+  ['Topic', 'Keywords', 'Answer'],
+  [
+    'Minimum Order Quantity (MOQ)',
+    'moq minimum order quantity how many pcs pieces per design low minimum small order',
+    'Our standard MOQ is 500 pieces per design / color. For stock designs we can accept mixed small batches. Lower quantities are negotiable for a first trial order.',
+  ],
+  [
+    'Production Lead Time',
+    'lead time production time how long delivery timeframe turnaround after deposit',
+    'Normal production is 25-35 days after receipt of deposit and confirmed artwork. Rush orders (15-20 days) are possible with a surcharge depending on season.',
+  ],
+  [
+    'Payment Terms',
+    'payment terms t/t t/t l/c deposit pay paypal western union before shipment',
+    'We accept 30% deposit by T/T and 70% balance before shipment. L/C at sight is accepted for established buyers. PayPal is available for sample fees only.',
+  ],
+  [
+    'Shipping & Incoterms',
+    'shipping fob cif exw freight delivery method port sea air express',
+    'We usually ship FOB Shenzhen or Shanghai. CIF and EXW are available on request. We work with your freight forwarder or arrange air/sea/express as needed.',
+  ],
+  [
+    'Certifications',
+    'certificate certification cert gots grs oeko-tex oeko bsci iso reach ce organic recycled',
+    'We are certified with GOTS, GRS, OEKO-TEX Standard 100, BSCI, ISO9001, ISO14001, CE and REACH, supporting organic and recycled-material claims.',
+  ],
+  [
+    'Materials',
+    'material cotton microfiber bamboo fabric 100% cotton blend fibre fiber',
+    'We produce 100% combed cotton, cotton-bamboo blends, and microfiber (polyester/polyamide). All can be GOTS or GRS certified on request.',
+  ],
+  [
+    'Towel Weight (GSM)',
+    'gsm weight gram thickness towel weight density how heavy',
+    'Standard beach towels are 300-500 gsm. We recommend 350-400 gsm for a plush feel, 280-320 gsm for lightweight travel towels.',
+  ],
+  [
+    'Customization & Printing',
+    'custom customize print printing embroidery design logo pattern artwork your design',
+    'We offer digital printing, screen printing and embroidery. Send us your artwork (AI / PDF / PNG) or pick from our in-house design library. No print plate fee for digital printing.',
+  ],
+  [
+    'Sample Policy',
+    'sample free sample sample cost make sample custom sample stock sample',
+    'Stock samples are free (you pay shipping). Custom printed samples cost USD 30-60, fully refundable against your bulk order.',
+  ],
+  [
+    'Sizes & Dimensions',
+    'size dimension sizes 30x60 70x140 80x160 beach towel size custom size cm',
+    'Standard beach towels are 70x140 cm and 80x160 cm. We also make 30x60 cm hand towels and fully custom sizes.',
+  ],
+  [
+    'Packaging',
+    'packaging packing polybag opp bag carton how packed label hangtag',
+    'Each towel is folded and packed in an individual polybag; 20-40 pcs per export carton. Custom belly bands, hangtags and printed cartons are available.',
+  ],
+  [
+    'Company Introduction',
+    'company about factory who are you introduce experience years history manufacturer',
+    'SUNWEAVE is a beach-towel manufacturer with over 12 years of export experience, supplying brands and retailers across North America, Europe and Australia.',
+  ],
+  [
+    'Export Markets',
+    'market markets country export usa europe australia customer region',
+    'We export mainly to the USA, Germany, France, the UK, Australia and Japan, and serve both large retailers and growing DTC brands.',
+  ],
+  [
+    'Pricing & Quote',
+    'price cost quote how much cheapest pricing budget unit price',
+    'Price depends on size, weight (gsm), print method and quantity. Tell us your target specs and we will send a tailored quote within 24 hours.',
+  ],
+  [
+    'Eco & Recycled Options',
+    'eco recycled sustainable organic rpet plastic bottle green environment',
+    'We offer GRS-certified recycled polyester made from rPET bottles and GOTS organic cotton, with full traceability for eco-conscious brands.',
+  ],
+  [
+    'OEM & ODM Service',
+    'oem odm private label white label brand your brand develop new product',
+    'We provide both OEM (your design, our production) and ODM (our design, your brand). Private-label programs include packaging, tags and barcodes.',
+  ],
+];
+
+function csvEscape(v) {
+  const s = String(v == null ? '' : v);
+  if (/[",\n\r]/.test(s)) return '"' + s.replace(/"/g, '""') + '"';
+  return s;
+}
+
+const csv = ROWS.map((r) => r.map(csvEscape).join(',')).join('\n');
+const out = path.join(__dirname, '..', 'kb-template.csv');
+fs.writeFileSync(out, '﻿' + csv, 'utf8');
+console.log('Wrote', out, '(' + ROWS.length + ' rows)');

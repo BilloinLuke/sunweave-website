@@ -1,0 +1,13 @@
+{
+  "name": "sunweave-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SUNWEAVE beach towel export site — static pages + Vercel serverless chat (/api/chat).",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  }
+}
