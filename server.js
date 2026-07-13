@@ -63,9 +63,12 @@ function sendJSON(res, status, obj, headers = {}) {
   const body = JSON.stringify(obj);
   res.writeHead(status, {
     'Content-Type': 'application/json',
-    'Access-Control-Allow-Origin': ALLOWED_ORIGIN,
+    'Access-Control-Allow-Origin': ALLOWED_ORIGIN === '*' ? '*' : ALLOWED_ORIGIN,
     'Access-Control-Allow-Methods': 'POST, OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type',
+    'X-Content-Type-Options': 'nosniff',
+    'X-Frame-Options': 'DENY',
+    'Content-Security-Policy': "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; connect-src 'self' https://generativelanguage.googleapis.com;",
     ...headers
   });
   res.end(body);
@@ -74,13 +77,15 @@ function sendJSON(res, status, obj, headers = {}) {
 const server = http.createServer(async (req, res) => {
   const parsed = url.parse(req.url, true);
   const pathname = parsed.pathname;
+  const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
 
   // CORS preflight
   if (req.method === 'OPTIONS') {
     res.writeHead(200, {
-      'Access-Control-Allow-Origin': ALLOWED_ORIGIN,
+      'Access-Control-Allow-Origin': ALLOWED_ORIGIN === '*' ? '*' : ALLOWED_ORIGIN,
       'Access-Control-Allow-Methods': 'POST, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type'
+      'Access-Control-Allow-Headers': 'Content-Type',
+      'Vary': 'Origin'
     });
     res.end();
     return;
@@ -90,6 +95,10 @@ const server = http.createServer(async (req, res) => {
   if (pathname === '/api/chat') {
     if (req.method !== 'POST') {
       sendJSON(res, 405, { error: 'Method not allowed' });
+      return;
+    }
+    if (isRateLimited(ip)) {
+      sendJSON(res, 429, { error: 'Too many requests. Please try again later.' });
       return;
     }
     let body;

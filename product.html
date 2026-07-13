@@ -148,6 +148,38 @@
     var mdesc = document.querySelector('meta[name="description"]');
     if (mdesc) mdesc.setAttribute('content', p.name + ': ' + p.tagline + ' ' + (cat ? cat.blurb : '') + ' OEM/ODM customizable with low MOQ.');
 
+    /* ---- SEO: JSON-LD Product Schema ---- */
+    (function injectProductSchema() {
+      var script = document.createElement('script');
+      script.type = 'application/ld+json';
+      var schema = {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": p.name,
+        "image": [
+          "https://www.sunweave.com/" + p.src
+        ],
+        "description": p.story + " " + p.tagline,
+        "sku": p.id,
+        "brand": {
+          "@type": "Brand",
+          "name": "SUNWEAVE"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.sunweave.com/product.html?id=" + encodeURIComponent(p.id),
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@type": "Organization",
+            "name": "SUNWEAVE"
+          }
+        }
+      };
+      script.textContent = JSON.stringify(schema);
+      document.head.appendChild(script);
+    })();
+
     /* ---- Build page ---- */
     function listHTML(arr) { return '<ul>' + arr.map(function (x) { return '<li>' + x + '</li>'; }).join('') + '</ul>'; }
     function chipsHTML() {
