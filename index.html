@@ -850,6 +850,18 @@
           }).catch(function () { removeTyping(); addMsg('bot', "Service temporarily unavailable."); sendBtn.disabled = false; });
       }
       form.addEventListener('submit', function (e) { e.preventDefault(); send(); });
+
+      // Handle preset question chips
+      document.getElementById('suggestions').addEventListener('click', function (e) {
+        var chip = e.target.closest('.chip');
+        if (!chip) return;
+        var text = chip.getAttribute('data-text');
+        if (!text) return;
+        input.value = text;
+        send();
+        // Hide suggestions after the first interaction to keep the chat clean
+        this.style.display = 'none';
+      });
     })();
   </script>
   <script src="assets/js/inquiry-modal.js"></script>
