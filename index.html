@@ -860,7 +860,11 @@
           var text = chip.getAttribute('data-text');
           if (!text) return;
           input.value = text;
-          send();
+          if (typeof form.requestSubmit === 'function') {
+            form.requestSubmit();
+          } else {
+            send();
+          }
           this.style.display = 'none';
         });
       }
