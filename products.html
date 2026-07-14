@@ -298,6 +298,29 @@
       if (!initial) { window.scrollTo({ top: document.querySelector('.pw-grid').offsetTop - 80, behavior: 'smooth' }); }
     }
     filter('all', true);
+
+    // Handle preset question chips
+    var suggestions = document.getElementById('suggestions');
+    if (suggestions) {
+      suggestions.addEventListener('click', function (e) {
+        var chip = e.target.closest('.chip');
+        if (!chip) return;
+        var text = chip.getAttribute('data-text');
+        if (!text) return;
+        // The chat context is defined inside its own IIFE or scope
+        // We need to ensure we can call 'send' or trigger the form
+        var input = document.getElementById('chatInput');
+        if (input) {
+          input.value = text;
+          var form = document.getElementById('chatForm');
+          if (form) {
+            var event = new Event('submit', { cancelable: true });
+            form.dispatchEvent(event);
+          }
+        }
+        this.style.display = 'none';
+      });
+    }
   })();
   </script>
   <script src="assets/js/inquiry-modal.js"></script>
