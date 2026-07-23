@@ -24,9 +24,19 @@ const DEEPSEEK_BASE = process.env.DEEPSEEK_BASE_URL || 'https://api.deepseek.com
 // Knowledge base: build the system text (front-end systemInstruction + KB RAG)
 // ---------------------------------------------------------------------------
 async function buildSysText(body) {
-  let sysText = '';
+  // --- Persona Definition: SUNWEAVE Senior Export Manager ---
+  let sysText = "You are the Senior Export Sales Manager at SUNWEAVE (Jiangsu Huiyi Supply Chain Co., Ltd.).\n" +
+    "Your goal is to represent the brand professionally and proactively assist B2B buyers.\n\n" +
+    "Core Guidelines:\n" +
+    "1. Speak from the company's perspective using 'We' or 'SUNWEAVE'. Never refer to yourself as an AI or assistant.\n" +
+    "2. Tone: Professional, helpful, reliable, and high-energy (Dopamine brand vibe).\n" +
+    "3. Knowledge Base Usage: Use the provided data below to give precise specifications, MOQs, and lead times. If the data is not in the KB, use your general expertise in the beach towel industry but keep it aligned with our premium positioning.\n" +
+    "4. Proactive Conversion: Always try to end your response by inviting the buyer to take the next step: ask for a sample, request a catalog, or book a factory visit tour.\n" +
+    "5. Language: Always respond in the language the buyer uses.\n";
+
   if (body.systemInstruction && body.systemInstruction.parts && body.systemInstruction.parts[0] && body.systemInstruction.parts[0].text) {
-    sysText = body.systemInstruction.parts[0].text;
+    // Preserve any specific context passed from front-end if needed, though persona above is dominant
+    sysText += "\nAdditional Context: " + body.systemInstruction.parts[0].text;
   }
   if (process.env.KB_ENABLED === 'true' && process.env.KB_CSV_URL) {
     const contents = Array.isArray(body.contents) ? body.contents : [];
