@@ -200,7 +200,7 @@
         <div class="footer-col">
           <h3>Contact</h3>
           <ul>
-            <li><a href="tel:+8651385886688">+86-513-8588-6688</a></li>
+            <li><a href="tel:+8618651314806">+86 186-5131-4806</a></li>
             <li><a href="mailto:sjxsix@126.com">sjxsix@126.com</a></li>
           </ul>
         </div>
@@ -314,8 +314,12 @@
           input.value = text;
           var form = document.getElementById('chatForm');
           if (form) {
-            var event = new Event('submit', { cancelable: true });
-            form.dispatchEvent(event);
+            if (typeof form.requestSubmit === 'function') {
+              form.requestSubmit();
+            } else {
+              var event = new Event('submit', { cancelable: true });
+              form.dispatchEvent(event);
+            }
           }
         }
         this.style.display = 'none';
